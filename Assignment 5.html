@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Webpage</title>
+    <style>
+        body {
+            background-image: url('HOME.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header, nav, main, section, article, aside, footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        section, aside {
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Accessible Webpage</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>This is a sample accessible webpage with a background image.</p>
+        </section>
+
+        <section>
+            <h2>Content</h2>
+            <article role="article">
+                <h3>Article Title</h3>
+                <p>This is the content of the article.</p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Additional Information</h2>
+        <p>Some additional information or related links can go here.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2024 Accessible Webpage. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

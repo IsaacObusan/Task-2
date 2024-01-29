@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms with Advanced Features</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #000; /* Set background color to black */
+            color: #fff;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333; /* Form background color */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background-color: #444; /* Input background color */
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #2f87cc; /* Submit button background color */
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1b1656; /* Hover color for submit button */
+        }
+
+        fieldset {
+            border: 1px solid #555;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post" id="advancedForm" onsubmit="submitForm()">
+        <fieldset>
+            <legend>BOOKING FORM</legend>
+
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phoneNumber">Phone Number (Philippine Format):</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" pattern="(\+63\d{1}|\b0)(\d{3}[-.]?\d{3}[-.]?\d{4}\b)" placeholder="e.g., +639123456789 or 09123456789" required>
+
+            <label for="birthDate">Date of Birth:</label>
+            <input type="date" id="birthDate" name="birthDate">
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <label for="services">Services:</label>
+            <select id="services" name="services" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="web">Web Development</option>
+                <option value="mobile">Mobile App Development</option>
+                <option value="design">Graphic Design</option>
+                <option value="other">Other</option>
+            </select>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function submitForm() {
+            // Format phone number to +63 9XX-XXX-XXXX
+            var phoneNumberInput = document.getElementById("phoneNumber");
+            var formattedPhoneNumber = phoneNumberInput.value.replace(/^(\d{2})(\d{3})(\d{4})$/, '+63 $1-$2-$3');
+            phoneNumberInput.value = formattedPhoneNumber;
+
+            // Prepare data for submission
+            var formData = {
+                fullName: document.getElementById("fullName").value,
+                email: document.getElementById("email").value,
+                phoneNumber: formattedPhoneNumber,
+                birthDate: document.getElementById("birthDate").value,
+                message: document.getElementById("message").value,
+                Services: document.getElementById("services").value
+            };
+
+            // Send data to isaacjohn302003@gmail.com (replace with your server-side logic)
+            var formattedData = JSON.stringify(formData);
+            
+            // Insert additional code to send email to isaacjohn302003@gmail.com
+            // You may need to use a server-side language for this part.
+
+            // Display a message to the user (optional)
+            alert("Form submitted! wait for the response.");
+
+            // Prevent form submission
+            return false;
+        }
+    </script>
+
+</body>
+
+</html>

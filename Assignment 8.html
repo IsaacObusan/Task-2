@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Hi User!</h1>
+<h2>What's your name?</h2>
+
+<label for="nameInput">Enter your name:</label>
+<input type="text" id="nameInput" placeholder="Type your name...">
+<button onclick="saveAndWelcome()">Save & Welcome</button>
+
+<script>
+// Function to save name to localStorage and display welcome message
+function saveAndWelcome() {
+    var enteredName = document.getElementById("nameInput").value;
+    localStorage.setItem("lastname", enteredName);
+    document.body.innerHTML = "<h1>Welcome, " + enteredName + "!</h1>";
+}
+</script>
+
+</body>
+</html>

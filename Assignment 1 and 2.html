@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardinal Coders</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Set background color to black */
+            color: #fff; /* Set text color to white */
+        }
+
+        #sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: -250px; /* Initially hide the sidebar */
+            background-color: #111;
+            padding-top: 20px;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        #sidebar a {
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        #sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        #content {
+            margin-left: 0;
+            padding: 16px;
+            transition: margin-left 0.5s;
+        }
+
+        #openBtn {
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header img {
+            max-width: 80px; /* Minimize the logo size */
+            display: block;
+            margin: 0 auto; /* Center the logo */
+        }
+
+        header h1.div-header {
+            margin-top: 10px; /* Adjust top margin for header */
+        }
+
+        nav,
+        article,
+        section,
+        footer {
+            border: 1px solid #fff; /* Added for visualization */
+            margin: 10px; /* Added for visualization */
+        }
+
+        article {
+            margin-bottom: 20px;
+        }
+
+        .div {
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            letter-spacing: -3.36px;
+            background: linear-gradient(180deg, #042334 0%, #365e7d 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font: 84px/89px Zen Dots, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .div {
+                max-width: 100%;
+                font-size: 40px;
+                line-height: 47px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .div {
+                padding-top: 131px;
+            }
+        }
+
+        .div-header {
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #2f87cc 32.5%, #1b1656 99.99%, #11004f 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            align-self: end;
+            position: relative;
+            margin: 0 9px 0 49px;
+            padding: 0 45px 0 18px;
+            font: 400 40px Wallpoet, sans-serif;
+        }
+
+        @media (max-width: 991px) {
+            .div-header {
+                max-width: 100%;
+                margin-right: 10px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .div-header {
+                padding-left: 15px;
+            }
+        }
+
+        .img {
+            aspect-ratio: 1.34;
+            object-fit: contain;
+            object-position: center;
+            width: 380px;
+            align-self: end;
+            z-index: 10;
+            margin-top: -15px;
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="sidebar">     
+        <a href="Assignment 8.html">Local Storage</a>
+        <a href="Assignment 7.html">Drag and Drop</a>
+        <a href="Assignment 6.html">Geolocation</a>  
+        <a href="Assignment 5.html">Web Accessibility</a>      
+    </div>
+
+    <div id="content">
+        <div id="openBtn">&#9776; ISAAC</div>
+        <!-- Your existing website content goes here -->
+        <header>
+            <img src="logo.png" alt="Logo">
+            <h1 class="div-header">Cardinal Coders</h1>
+        </header>
+
+        <nav>
+            <a href="FINAL.html">Home</a>
+            <a href="Assignment4.html">Book Now</a>
+            <a href="Assignment3.html">Portfolio</a>
+        </nav>
+
+        <main>
+            <section>
+                <header>
+                    <h2>About</h2>
+                </header>
+                <article>
+                    <p>Cardinal Coders aims to elevate your digital experience with cutting-edge solutions in Backend, Frontend, Database, UI Design, and Animation.</p>
+                </article>
+            </section>
+
+            <section>
+                <div class="div">
+                    "Elevate Your Digital
+                    <br />
+                    Experience with
+                    <br />
+                    Cardinal Coders”
+                </div>
+                <img
+                    loading="lazy"
+                    srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/aa064da7df36f1772ab3d15fa054b7ffdf1519d235005b7af889c5ff057ae7c6?apiKey=11e34e8aa58f41559132ccf81507d85a&"
+                    class="img"
+                />
+            </section>
+        </main>
+
+        <footer>
+            <p> Where Cardinality Meets Excellence in
+                Backend, Frontend, Database, UI Design,
+                and Animation. Your One-Stop Solution
+                for Comprehensive System Services,
+                Innovative Designs, and Dynamic Animations.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('openBtn').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            var content = document.getElementById('content');
+
+            if (sidebar.style.left === '-250px') {
+                sidebar.style.left = '0';
+                content.style.marginLeft = '250px';
+            } else {
+                sidebar.style.left = '-250px';
+                content.style.marginLeft = '0';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
